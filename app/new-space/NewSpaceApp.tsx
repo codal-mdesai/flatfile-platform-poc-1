@@ -15,7 +15,7 @@ const Space = ({
     closeSpace: {
       operation: "contacts:submit",
       onClose: () => callback(),
-    },
+    }
   });
   return space;
 };

@@ -6,11 +6,15 @@ import { workbook } from "../../workbooks/workbook";
 import NewSpaceApp from "./NewSpaceApp";
 
 const spaceProps: ISpace = {
-  name: "Embedded Space",
+  name: "VIP Test",
+  space: {
+    id: "1",
+    accessToken: "122"
+  },
   // to test locally add your publishableKey here, for example: pk_12345,
-  publishableKey: "",
+  publishableKey: "pk_4c4b6c96cc7f4c54bc856fa98153b40f",
   // to test locally add your environmentId here, for example: us_env_12345,
-  environmentId: "",
+  environmentId: "us_env_LutmoxoP",
   workbook,
   listener: listener,
   // themeConfig: makeTheme({ primaryColor: "#546a76", textColor: "#fff" }),

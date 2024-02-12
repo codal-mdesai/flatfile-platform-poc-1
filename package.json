@@ -11,6 +11,7 @@
   "dependencies": {
     "@flatfile/api": "^1.6.3",
     "@flatfile/listener": "^0.4.0",
+    "@flatfile/plugin-xlsx-extractor": "^1.11.1",
     "@flatfile/react": "^7.5.3",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
