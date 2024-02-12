@@ -12,7 +12,7 @@ export default function Home() {
         they left off until the task is done.
       </p>
       <div className="py-10">
-        <ReusedSpaceApp spaceId={localStorage.getItem("spaceId")!} environmentId={"us_env_LutmoxoP"} />
+        <ReusedSpaceApp spaceId={(typeof window !== 'undefined')? localStorage.getItem("spaceId")! : ""} environmentId={"us_env_LutmoxoP"} />
       </div>
     </div>
   );

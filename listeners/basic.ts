@@ -1,29 +1,30 @@
 import api from "@flatfile/api";
 import { FlatfileListener } from "@flatfile/listener";
-import { recordHook } from "@flatfile/plugin-record-hook";
+import { RecordHook, recordHook } from "@flatfile/plugin-record-hook";
 import { ExcelExtractor } from "@flatfile/plugin-xlsx-extractor";
 import { FlatfileRecord } from "@flatfile/hooks";
 /**
  * Example Listener
  */
-export const listener = FlatfileListener.create((listener) => {
+export const listener = FlatfileListener.create((listener: FlatfileListener) => {
   listener.on("**", (event) => {
     console.log(`Received event: ${event.topic}`, event);
     if (event.topic == "space:created") {
       console.log("space created event", event);
-      localStorage.setItem("spaceId", event.context.spaceId)
+      if ((typeof window !== 'undefined')) {
+        localStorage.setItem("spaceId", event.context.spaceId)
+      }
     }
   });
+  listener.use(
+    recordHook("recipients-products", (record) => {
+      console.log({record});
+      return record;
+    })
+  );
   listener.on("file:created", (event) => {
     console.log(`Received event file:`,event);
   })
-  listener.use(
-    recordHook("recipients-products", (record: FlatfileRecord) => {
-      console.log({record});
-      
-      return record
-    })
-  );
   listener.use(ExcelExtractor());
   listener.filter({ job: "workbook:submitActionFg" }, (configure) => {
     configure.on("job:ready", async ({ context: { jobId } }) => {

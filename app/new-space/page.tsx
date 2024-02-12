@@ -10,7 +10,7 @@ const spaceProps: ISpace = {
   space: {
     id: "1",
     accessToken: "122"
-  },
+  } as any,
   // to test locally add your publishableKey here, for example: pk_12345,
   publishableKey: "pk_4c4b6c96cc7f4c54bc856fa98153b40f",
   // to test locally add your environmentId here, for example: us_env_12345,

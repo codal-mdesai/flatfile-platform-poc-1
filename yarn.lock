@@ -124,15 +124,26 @@
     pako "^2.1.0"
     wildcard-match "^5.1.2"
 
-"@flatfile/plugin-record-hook@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@flatfile/plugin-record-hook/-/plugin-record-hook-1.4.0.tgz#193fb88951d1471daba9f1acd9850b8fc39e9ab1"
-  integrity sha512-R65NPxxhdL9RP1MeTnvLqqntbAEqJqORluwS393RryOpQ/XJtEepMIMmHmovH2bKvARnSB7kPWFMIs1dsBdxog==
+"@flatfile/listener@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@flatfile/listener/-/listener-1.0.1.tgz#bc60711d0ad46b7236e9d3ec6d5e551bcd59ec22"
+  integrity sha512-XClO1KhQDL9Q7zfTANcMeole7Q/2QaIhzttZI+p04PjB+bUlIvk+yUbHvhnLahNkvLHRoIth4p+oBj8tPC1cxA==
+  dependencies:
+    ansi-colors "^4.1.3"
+    cross-fetch "^4.0.0"
+    flat "^5.0.2"
+    pako "^2.1.0"
+    wildcard-match "^5.1.2"
+
+"@flatfile/plugin-record-hook@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@flatfile/plugin-record-hook/-/plugin-record-hook-1.4.1.tgz#aa258dab3a1571e476407b1f73d2e858213a42d6"
+  integrity sha512-ME6vot5fuaIYYLLOjBGYRMoq/RiKUwfNXVlLycM2AnsUrRnhgrlwJQ8RizbNx5MkNp6SYOCXAcbFFdUqBXeC2w==
   dependencies:
     "@flatfile/api" "^1.6.3"
     "@flatfile/hooks" "^1.3.1"
     "@flatfile/listener" "^1.0.0"
-    "@flatfile/util-common" "^0.4.0"
+    "@flatfile/util-common" "^0.4.1"
     rollup-plugin-peer-deps-external "^2.2.4"
 
 "@flatfile/plugin-xlsx-extractor@^1.11.1":
@@ -145,15 +156,15 @@
     xlsx "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
 
 "@flatfile/react@^7.5.3":
-  version "7.8.1"
-  resolved "https://registry.yarnpkg.com/@flatfile/react/-/react-7.8.1.tgz#b81f9fb85ca5f370c64d61f8fc6f2e2ed05232b0"
-  integrity sha512-mYw8rMsCfA0Rn749V7d0WNwN21s4ZPKoCLTdVVPbTgRowxEfxcC0WXAZxCSqliHHh1nBK+nNLkUSj7FJFJ9F3w==
+  version "7.8.2"
+  resolved "https://registry.yarnpkg.com/@flatfile/react/-/react-7.8.2.tgz#0e19fe7820d1cb948fb2442ebb20cd40c2614b09"
+  integrity sha512-apsDjiddd+seqmz3jk9q168YoGBqN5VXUavxGEL1uV3FBGQE8WmHNq9sVi4PEhlRRxWXoZUr/Tf8ntHhbYo/4Q==
   dependencies:
     "@flatfile/api" "^1.6.7"
     "@flatfile/cross-env-config" "^0.0.5"
     "@flatfile/embedded-utils" "^1.1.9"
-    "@flatfile/listener" "^1.0.0"
-    "@flatfile/plugin-record-hook" "^1.4.0"
+    "@flatfile/listener" "^1.0.1"
+    "@flatfile/plugin-record-hook" "^1.4.1"
     tinycolor2 "^1.6.0"
 
 "@flatfile/util-common@^0.2.4":
@@ -168,6 +179,14 @@
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@flatfile/util-common/-/util-common-0.4.0.tgz#e2a1d505ea69c52c30a19a0f2c08bfe5f92f5af0"
   integrity sha512-PDNIgWEXdXG5iNAGbZb07XRswCI1pbtf2vAxcAbpEjcsWeqaxqEoSiEtuI+GKIBQCANRBl31K+S0cv+zI/lJlw==
+  dependencies:
+    "@flatfile/api" "^1.6.3"
+    "@flatfile/listener" "^1.0.0"
+
+"@flatfile/util-common@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@flatfile/util-common/-/util-common-0.4.1.tgz#e6203d2310f4ae9cdd7d38b56392e72cac5e72a3"
+  integrity sha512-sf45sjL7+gcdB290a75U3hbT3KMY5oMHRcAExansGf64W1Ek7T+rFERclDcNtAJkJttj4wscpDgo4iL29DEWAg==
   dependencies:
     "@flatfile/api" "^1.6.3"
     "@flatfile/listener" "^1.0.0"
