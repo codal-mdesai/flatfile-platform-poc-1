@@ -1,10 +1,8 @@
 import { Flatfile } from "@flatfile/api";
+import { CreateWorkbookConfig } from "@flatfile/api/api";
 
-export const workbook: Pick<
-  Flatfile.CreateWorkbookConfig,
-  "name" | "labels" | "sheets" | "actions"
-> = {
-  name: "All Data",
+export const workbook: CreateWorkbookConfig = {
+  name: "Recipient & Product Association",
   labels: ["pinned"],
   sheets: [
     {
@@ -182,9 +180,13 @@ export const workbook: Pick<
     {
       operation: "submitActionFg",
       mode: "foreground",
-      label: "Submit foreground",
+      label: "Submit",
       description: "Submit data to webhook.site",
       primary: true,
+      constraints: [{ type: 'hasAllValid'},{ type: 'hasData' }]
     },
   ],
+  settings: {
+    trackChanges: true,
+  }
 };

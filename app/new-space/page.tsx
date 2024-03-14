@@ -1,12 +1,13 @@
 "use client";
 import { ISpace } from "@flatfile/react";
 import React from "react";
-import { listener } from "../../listeners/basic";
+import {listener} from "../../listeners/basic";
 import { workbook } from "../../workbooks/workbook";
 import NewSpaceApp from "./NewSpaceApp";
 
 const spaceProps: ISpace = {
   name: "VIP Test",
+  namespace: "product-address",
   space: {
     id: "1",
     accessToken: "122"
@@ -17,6 +18,8 @@ const spaceProps: ISpace = {
   environmentId: "us_env_LutmoxoP",
   workbook,
   listener: listener,
+  translationsPath:"",
+  languageOverride:""
   // themeConfig: makeTheme({ primaryColor: "#546a76", textColor: "#fff" }),
   // sidebarConfig: {
   //   showDataChecklist: false,
